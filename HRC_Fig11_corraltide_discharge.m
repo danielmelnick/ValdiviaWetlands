@@ -53,11 +53,11 @@ alpha(hp2,0.5);
 plot(HRC.t,HRC.avgc,'-r','LineWidth',1.2)
 xlim([1985,2025])
 box off
-ylabel('Vegetation area change (%)','FontSize',fs)
+ylabel('Water-mirror area change (%)','FontSize',fs)
 a1=[94.43;14.84]; %km;
 a2=[60.67;5.4]; 
 achange=(a1(1)-a2(1))/(HRC.t(end)-HRC.t(1));
-text(2008,1,sprintf('Vegetation area change= %3.1f km^2/yr',achange),'Color','r')
+text(2008,1,sprintf('Water-mirror area change= %3.1f km^2/yr',achange),'Color','r')
 
 yyaxis left
 plot([ELA.tlin],[ELA.filt],'-','Color',[gr gr gr+.3])
@@ -117,7 +117,8 @@ row = 2; col = 1;
 plot(data(:,col), data(:,row), '.b','MarkerSize',0.1);
 xlim([-180 60])
 xlabel(var_names{col}); ylabel(var_names{row});
-xlabel('Relative sea level (mm)','FontSize',fs); ylabel('Vegetation area change (%)','FontSize',fs)
+xlabel('Relative sea level (mm)','FontSize',fs); 
+ylabel('Water-mirror area change (%)','FontSize',fs)
 title(sprintf('r = %.2f', R_pearson(row,col)));
 box on
 set(gca,'YAxisLocation','right')

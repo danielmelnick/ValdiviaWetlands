@@ -12,7 +12,7 @@ ylabel('Coseismic uplift in 1960 (m)'), xlabel('Tributary basin')
 
 subplot(122)
 boxplot(GPSstack,label,'PlotStyle','traditional','symbol','.','OutlierSize',0.00001)
-ylabel('Interseismic GPS uplift rate (mm/yr)'), xlabel('Tributary basin')
+ylabel('Interseismic GNSS uplift rate (mm/yr)'), xlabel('Tributary basin')
 set(gca,'YAxisLocation','right')
 %
 rect=[2,4,20,10]; %[xmin ymin width height]
